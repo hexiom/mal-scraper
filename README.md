@@ -1,15 +1,15 @@
-# Project Title
+# MyAnimeList Scraper
 
-One Paragraph of the project description
-
-Initially appeared on
-[gist](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2). But the page cannot open anymore so that is why I have moved it here.
+A scraper for MyAnimeList (MAL) created using [Selenium](https://www.selenium.dev/) in Python.
 
 ## Getting Started
 
-These instructions will give you a copy of the project up and running on
-your local machine for development and testing purposes. See deployment
-for notes on deploying the project on a live system.
+Clone the repository using ```git clone```
+```bash
+git clone https://github.com/hexiom/mal-scraper.git
+```
+
+or click **Code** and "Download Zip" to download the repository.
 
 ### Prerequisites
 
@@ -21,7 +21,17 @@ python -m pip install selenium
 ```
 
 ### Usage
-TODO. Check the script
+There are 3 different scripts for scraping anime reviews (mal_comment_scraper.py), anime details (mal_anime_scraper.py) and user details (mal_user_scraper.py)
+
+```bash
+python mal_anime_scraper.py [input-file] -u [urls] -v/--verbose -o [output-file]
+```
+
+```bash
+python mal_comment_scraper.py -s [source-urls] -t [target-urls] -l [scrape-limit] -p [max-anime-pagination] -r [max-review-pagination] --headless -v/--verbose -o [output-file]
+```
+
+The user scraper (mal_user_scraper.py) is currently a WIP. It doesn't work and is a copy of the comment scraper.
 
 ## Built With
 
